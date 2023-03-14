@@ -1,11 +1,10 @@
-const { Router } = require('express');
-const productsRouter = require('./products');
-const cartRouter = require('./cart');
-const productsRouterDB = require('./productsMongoDB');
+import { Router } from 'express';
+import productsRouter from './products';
+import productsRouterDB from  './productsMongoDB';
 
 
 // Conexion a la base de datos
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 const user = 'root';
 const password = 'mafe';
 const bd = 'myeccomerce';
@@ -22,4 +21,4 @@ const routerMain = Router();
 //Routers desde la base de datos
 routerMain.use('/productsDB', productsRouterDB);
 
-module.exports = routerMain;
+export default routerMain;
