@@ -1,5 +1,5 @@
-const productMDB = require('../models/product');
-const {Router} = require('express');
+import productMDB = from '../models/product';
+import {Router} = from 'express';
 const productsRouteMDB = Router();
 
 
@@ -82,4 +82,4 @@ productsRouteMDB.put('/:id', async(req, res)=>{
 
 
 
-module.exports = productsRouteMDB;
+export default productsRouteMDB;
